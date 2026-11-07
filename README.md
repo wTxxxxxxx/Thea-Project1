@@ -15,6 +15,22 @@ measure satisfaction expressed in the available review records; they are not
 measures of sales, purchase intention, or profit. This repository does not
 report results from a human-subject experiment.
 
+## Data
+
+This project uses the [Amazon Reviews 2023 dataset](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023).
+The raw data is not included in this repository because of its size.
+
+Download the required review and product metadata files from the dataset page,
+then follow `data_prep.ipynb` to prepare the files needed by the modeling
+notebook. The modeling notebook expects:
+
+- `Amazon/model_table.parquet`
+- `Amazon/emb_minilm_raw.npy`
+
+The embedding file must also be generated or obtained separately; linking to
+the raw dataset alone does not provide these prepared files.
+
+
 ## Approach
 
 We compare simple baselines with several predictive models:
